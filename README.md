@@ -36,21 +36,21 @@
 其中 ( x, y ) 稱為**空間座標 (Spatial Coordinate)**， f 的大小稱為**強度 (Intensity)** 或**灰階 (Gray Level)**。當 x、 y 與 f 均為有限的離散值時，則影像稱為**數位影像  (Digital Image)**。 
  
 典型的數位影像， 如圖所示，稱為 **Lenna** 影像，是影像處理技術相關研究領域經常使用的數位影像。數位影像是由許多基本元素( 或點 )所構成，這些基本元素稱為**像素( Pixels )**。**像素( Pixels )** 其實是源自 **Picture Elements** 的英文，其中 cture 以 x 取代縮寫而得。空間座標經常 以**列 ( Rows )** 與 **行 ( Columns )** 表示，因此數位影像包含 M 列 × N 行像素。影像的左上角為原點，座標為  ( 0, 0 )，右下角的座標為 （ M - 1, N - 1 ） 。
-![](/content/images/2017/05/QQ--20170528174428-1.png)
+![](http://codingstory.com.cn/content/images/2017/05/QQ--20170528174428-1.png)
 數位影像中每一個像素的灰階值通常是選取固定的階數L，且L為 2 的冪次方，即： 
 
                                             L = 2ⁿ
 通常每個像素是以 8 位元 ( n = 8 ) 儲存，即 L = 2^8 = 256 ，代表共有 256 個灰階，其值介於 0 ~ 255 之間；0 代表黑色，255 代表白色。以下為局部區域範例： 
 ![](/content/images/2017/05/QQ--20170528174843.png)
 數位影像可以分成**灰階影像( Gray-Level Image )**與**彩色影像( Color Image )**，如下圖所示。 以彩色影像而言，每個像素則包含 **R、G、B**( 即光的三原色，分別為紅、綠、藍色 )。**R、G、 B** 又稱為**通道( Channel )**，因此灰階影像又稱為單通道影像，彩色影像則稱為三通道影像。通常，彩色影像中每個像素是以 **24-bits**( 即每個通道各佔 8-bits ) 存取。 
-![](/content/images/2017/05/QQ--20170528175116.png)
+![](http://codingstory.com.cn/content/images/2017/05/QQ--20170528175116.png)
 
 ***
 ###3、OpenCV 介紹
 OpenCV 為**開源電腦視覺程式庫( Open Source Computer Vision Library )** 的縮寫，其中包 含：影像處理、視訊處理、機器學習、…等相關技術。由於 OpenCV 程式庫為 BSD 授權，屬 於自由軟體，同時提供許多開放原始碼，可供學術界與產業界免費使用，目前已被廣泛應用 於許多不同的領域。
 
 OpenCV 定義了一組資料型態，可以用來處理不同的資料型態，如下表。其中，OpenCV 主要是使用 Mat ( Matrix 矩陣 ) 的資料結構存取數位影像。 
-![](/content/images/2017/05/QQ--20170528175400.png)
+![](http://codingstory.com.cn/content/images/2017/05/QQ--20170528175400.png)
 
 ***
 ###4、圖像讀取、顯示、存儲 程式設計
@@ -89,7 +89,7 @@ int main(int argc, char** argv) {
 * 第 15 行 於 Image 視窗中顯示數位影像 img。 
 * 第 16 行 等待使用者輸入，0 表示持續等待直至使用者鍵入任意鍵再繼續往下執行。 
 * 第 18 行 回傳值。 
-![](/content/images/2017/05/QQ--20170528181804.png)
+![](http://codingstory.com.cn/content/images/2017/05/QQ--20170528181804.png)
 當載入的影像為色彩影像時，則資料型態為 CV_8U，其中 8U 代表使用 unsigned char 的資料型態 ( 8 bits )，共有 R、G、B 三個通道。下列指令為讀取數位影像在 ( x, y ) 座標的像素色彩值： 
 ```
 Vec3b RGB = img.at<Vec3b>( x, y ) ; 
@@ -172,7 +172,7 @@ int main(int argc, char** argv) {
 		return 0;
 	}
 ```
-![](/content/images/2017/05/QQ--20170528190228.png)
+![](http://codingstory.com.cn/content/images/2017/05/QQ--20170528190228.png)
 
 ***
 #以上
